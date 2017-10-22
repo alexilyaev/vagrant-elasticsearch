@@ -1,27 +1,19 @@
-# Vagrant Kafka
+Vagrant Elasticsearch
+=======================
 
-## Installation
+Installation
+-------------
+
 1. install [vagrant](https://www.vagrantup.com/DOCS/installation/)
-2. kafka is on local virtual machine ip `192.168.33.10`
+1. Run `vagrant up` in the repo (will install needed resources)
+1. Check it works: [http://localhost:9200](http://localhost:9200) should respond with a JSON
 
-## Machine commands
+If you're into Kibana (GUI for Elasticsearch)
+-----------------------------------------------
 
-1. enter vagrant machine `vagrant ssh`
-2. `startkafka` - will start the kafka server on the virtual machine
+Not currently included in the VM.
 
-## Check Kafka
-
-create new topic
-```
-bin/kafka-topics.sh --create --zookeeper 192.168.33.10:2181 --replication-factor 1 --partitions 1 --topic test
-```
-
-producer
-```
-bin/kafka-console-producer.sh --broker-list 192.168.33.10:9092 --topic test
-```
-
-consumer
-```
-bin/kafka-console-consumer.sh --bootstrap-server 192.168.33.10:9092 --topic test --from-beginning
-```
+1. Install Kibana
+  - Mac - `brew install kibana`
+1. Run `kibana` in the command line
+1. Check it works: [http://localhost:5601](http://localhost:5601) should show a GUI
