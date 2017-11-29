@@ -14,6 +14,6 @@ If you're into Kibana (GUI for Elasticsearch)
 Not currently included in the VM.
 
 1. Install Kibana
-  - Mac - `brew install kibana`
+    - Mac - `brew install kibana`
 1. Run `kibana` in the command line
 1. Check it works: [http://localhost:5601](http://localhost:5601) should show a GUI
